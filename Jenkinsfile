@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        ECR_REGISTRY="https://xxxxxx.dkr.ecr.ap-south-1.amazonaws.com"
-        APP_REPO_NAME="xxxxxxxx.dkr.ecr.ap-south-1.amazonaws.com/app-registry"
+        ECR_REGISTRY="https://500116276682.dkr.ecr.ap-south-1.amazonaws.com"
+        APP_REPO_NAME="500116276682.dkr.ecr.ap-south-1.amazonaws.com/app-registry1"
         AWS_REGION="ap-south-1"
     }
     stages{
@@ -32,6 +32,7 @@ pipeline {
                 }
             } 
         }
+        
     }
     post {
         always {

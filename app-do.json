@@ -1,0 +1,19 @@
+{
+    "family": "application",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [{
+     "name": "app-do",
+     "image": "500116276682.dkr.ecr.ap-south-1.amazonaws.com/app-registry1:latest",
+     "portMappings": [{
+      "containerPort": 3000,
+      "protocol": "tcp"
+     }],
+     "essential": true
+    }],
+    "requiresCompatibilities": [
+     "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+           "executionRoleArn": "arn:aws:iam::500116276682:role/ecsTaskExecutionRole"
+   }
