@@ -28,7 +28,7 @@ pipeline {
                     sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}"
                     sh "docker pull ${APP_REPO_NAME}:latest"
                     sh 'docker rm -f app-do | echo "there is no docker container named app-do "'
-                    sh "docker run -d --name app-do 80:3000 ${APP_REPO_NAME}:latest"
+                    sh "docker run -d --name app-do -p 80:3000 ${APP_REPO_NAME}:latest"
                 }
             } 
         }
